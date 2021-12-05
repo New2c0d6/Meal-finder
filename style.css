@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #262833;
+  color: #fff;
+  text-align: center;
+  opacity: 87%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.search {
+  text-align: center;
+  font-size: 36px;
+  margin: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+button {
+  border: 1px;
+  border-style: solid;
+  background-color: #fff;
+}
+
+#search-bar {
+  width: 300px;
+  height: 35px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 10px;
+}
+
+#search-button {
+  opacity: 80%;
+  cursor: pointer;
+  color: #262833;
+  width: 35px;
+  height: 35px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#meal-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.meal {
+  cursor: pointer;
+  position: relative;
+  height: 250px;
+  width: 200px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+}
+
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 5px #fff solid;
+  border-radius: 5px;
+}
+
+.meal-info p {
+  margin: 5px 0px 0px;
+  font-size: 18px;
+}
+
+.single-meal {
+  margin: 40px auto;
+  width: 70%;
+}
+
+.single-meal img {
+  width: 500px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 5px;
+}
+
+.single-meal-info {
+  margin: 20px;
+  padding: 10px;
+  border: 2px #dadada solid;
+  border-radius: 5px;
+}
+
+.single-meal p {
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.single-meal ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.single-meal ul li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 10px 10px 0;
+}
+
+@media (max-width: 800px) {
+  #meal-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  #meal-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .single-meal img {
+    width: 100%;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  #meal-container {
+    grid-template-columns: 1fr;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .single-meal img {
+    width: 100%;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
